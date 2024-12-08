@@ -1,0 +1,421 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #081b29;
+}
+
+.container{
+    position: relative;
+    width: 750px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid #0ef;
+    overflow: hidden;
+    box-shadow: 0px 0px 25px #0ef;
+}
+
+.login{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    padding: 0 60px 0px 40px;
+    /* display: none; */
+}
+
+
+
+.register{
+    position: absolute;
+    top: 0;
+    margin-top: 2vh;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    right : 0;
+    padding: 0 40px 0px 60px;
+    
+}
+
+.login>h1{
+    font-style: 32px;
+    color: #fff;
+    text-align: center;
+}
+.register>h1{
+    margin-bottom: 2vh;
+    font-style: 32px;
+    color: #fff;
+    text-align: center;
+}
+
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0; 
+}
+.input-box>input{
+    width: 100%;
+    height: 100%;
+    margin-top: 2vh;
+    background: transparent;
+    border-radius: 20px 20px 20px 20px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    padding-right: 23px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: inset 5px 3px 10px rgb(10, 10, 10);
+    transition: 1s;
+}
+
+.input-box input:focus,
+.input-box input:valid{
+    box-shadow: inset 0px 0px 5px #0ef;
+    
+}
+
+.input-box>label{
+    position: absolute;
+    top: 60%;
+    padding-left: 5px;
+    left: 0;
+    transform: translate(10%);
+    font-style: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+    color: #0ef;
+}
+
+
+/* for register page */
+.input-box2{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 15px 0; 
+}
+.input-box2>input{
+    width: 100%;
+    height: 80%;
+    margin-top: 1vh;
+    background: transparent;
+    border-radius: 20px 20px 20px 20px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+    padding-right: 23px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: inset 5px 3px 10px rgb(10, 10, 10);
+    transition: 1s;
+}
+
+.input-box2 input:focus,
+.input-box2 input:valid{
+    box-shadow: inset 0px 0px 5px #0ef;
+    
+}
+
+.input-box2>label{
+    position: absolute;
+    top: 40%;
+    padding-left: 10px;
+    left: 0;
+    transform: translate(10%);
+    font-style: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: 1s;
+}
+
+.input-box2 input:focus~label,
+.input-box2 input:valid~label{
+    top: -13px;
+    color: #0ef;
+}
+.btn{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background : linear-gradient(#081b29, #0ef , #081b29 , #0ef);
+    z-index: -1;
+    transition: .5s;
+}
+.btn:hover::before{
+    top: 0;
+}
+
+.btn2{
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border: 2px solid #0ef;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.btn2::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 300%;
+    background : linear-gradient(#081b29, #0ef , #081b29 , #0ef);
+    z-index: -1;
+    transition: .5s;
+}
+.btn2:hover::before{
+    top: 0;
+}
+
+.not-acc{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0px 10px; 
+}
+
+.not-acc h3 a{
+    color: #0eff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.not-acc h3 a:hover{
+    text-decoration: underline;
+
+}
+
+.not-acc2{
+    font-size: 14px;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0px 10px; 
+}
+
+.not-acc2 h3 a{
+    color: #0eff;
+    text-decoration: none;
+    font-weight: 600;
+}
+.not-acc2 h3 a:hover{
+    text-decoration: underline;
+
+}
+
+.information{
+    position: absolute;
+    top: 0;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+    padding: 0px 40px 60px 150px;
+    /* display: none; */
+}
+
+.information>h2{
+    margin-top: -15vh;
+    margin-left: 1vw;
+    font-size: 36px;
+    color: #fff
+}
+.information>p{
+    margin-top: 5vh;
+    font-size: 16px;
+    color: #fff;
+}
+/*for 2nd information */
+
+.information2{
+    position: absolute;
+    top: 0;
+    
+    width: 50%;
+    height: 100%;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    padding: 0px 150px 60px 40px;
+}
+
+.information2>h2{
+    
+    margin-left: 1vw;
+    font-size: 36px;
+    color: #fff
+}
+.information2>p{
+    margin-top: 5vh;
+    font-size: 20px;
+    color: #fff;
+}
+
+.b-animation {
+    position: absolute;
+    top: -4px;
+    right: 0;
+    width: 850px;
+    height: 600px;
+    border-bottom: 3px solid #0ef;
+    background: linear-gradient(45deg, #081b29, #0ef);
+    transform: rotate(10deg) skewY(40deg);
+    transform-origin: bottom right;
+    transition: transform .8s ease; /* Smooth transition when switching */
+}
+
+/* When the container is active (showing register form) */
+.container.active .b-animation {
+    transform: rotate(0) skewY(0); /* Back to original state */
+    transition: transform .8s ease; /* Smooth transition */
+}
+
+.b-animation2 {
+    position: absolute;
+    top: 100%;
+    left: 250px;
+    width: 850px;
+    height: 700px;
+    border-top: 3px solid #0ef;
+    background: #081b29;
+    transform: rotate(0) skewY(0);
+    transform-origin: bottom left;
+    transition: transform 1s ease-in-out; /* Smooth transition when switching */
+}
+
+/* When the container is active (showing register form) */
+.container.active .b-animation2 {
+    transform: rotate(-11deg) skewY(-41deg); /* Transition to new state when active */
+    transition: transform 1s ease; /* Smooth transition */
+}
+
+
+/*for sliding animation*/
+
+.container.active .t {
+    transform: translateX(-120%);
+    transition: transform .3s ease-in-out;
+}
+.container.active .input-box {
+    transform: translateX(-120%);
+    transition: transform .4s ease-in-out;
+}
+.container.active .btn {
+    transform: translateX(-120%);
+    transition: transform .5s ease-in-out;
+}
+.container.active .not-acc {
+    transform: translateX(-120%);
+    transition: transform .6s ease-in-out;
+}
+
+
+.container.active .information {
+    transform: translateX(120%);
+    filter: blur(1px);
+    transition: transform .8s ease-in-out;
+}
+.container:not(.active) .t {
+    transform: translateX(0);
+    transition: transform 0.6s ease;
+}
+
+.container:not(.active) .input-box {
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out;  /* Speed up the form element reset */
+}
+
+.container:not(.active) .btn {
+    transform: translateX(0);
+    transition: transform .8s ease-in-out; /* Add slight delay */
+}
+
+.container:not(.active) .not-acc {
+    transform: translateX(0);
+    transition: transform .9s ease-in-out;
+}
+
+.container:not(.active) .information {
+    transform: translateX(0);
+    transition: transform 0.7s ease-in-out;
+}
+/* for registrayion form animation*/
+.register {
+    transform: translateX(120%);
+    
+}
+.container.active .register{
+    transform: translateX(0);
+    transition: transform 1s ease;
+}
+.information2 {
+    transform: translateX(-120%);
+}
+.container.active .information2{
+    transform: translateX(0);
+    transition: transform 1s ease;
+}
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}
+
